@@ -77,6 +77,7 @@ export default {
       animation-direction: normal;
       animation-fill-mode: forwards;
       animation-play-state: running;
+      
     }
 
     .item{
