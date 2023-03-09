@@ -1,7 +1,7 @@
 <template>
   <div class="big-box">
-    <div class="item"><img :src="img1" alt=""></div>
-    <div class="item"><img :src="img2" alt=""></div>
+<!--    <div class="item"><img :src="img1" alt=""></div>-->
+    <div class="item" @click="iconClick"><img :src="img2" alt=""></div>
     <div class="item"><img :src="img3" alt=""></div>
     <div class="item"><img :src="img4" alt=""></div>
     <div class="item"><img :src="img5" alt=""></div>
@@ -14,21 +14,21 @@
 </template>
 
 <script>
-import img1 from '@/assets/01.jpg'
-import img2 from '@/assets/02.jpg'
-import img3 from '@/assets/03.jpg'
-import img4 from '@/assets/04.jpg'
-import img5 from '@/assets/05.jpg'
-import img6 from '@/assets/06.jpg'
-import img7 from '@/assets/07.jpg'
-import img8 from '@/assets/08.jpg'
-import img9 from '@/assets/09.jpg'
-import img99 from '@/assets/10.jpg'
+// import img1 from '@/assets/01.webp'
+import img2 from '@/assets/02.webp'
+import img3 from '@/assets/03.webp'
+import img4 from '@/assets/04.webp'
+import img5 from '@/assets/05.webp'
+import img6 from '@/assets/06.webp'
+import img7 from '@/assets/07.webp'
+import img8 from '@/assets/08.webp'
+import img9 from '@/assets/09.webp'
+import img99 from '@/assets/10.webp'
 export default {
   name: "Content",
   data() {
     return {
-      img1,
+      // img1,
       img2,
       img3,
       img4,
@@ -39,6 +39,18 @@ export default {
       img9,
       img99,
     }
+  },
+  methods: {
+    iconClick() {
+      this.$router.push({
+        path: '/details',
+        query: {
+
+
+
+        }
+      })
+    }
   }
 }
 </script>
@@ -47,7 +59,7 @@ export default {
   .big-box{
     width: 100%;
     overflow: hidden;
-    padding: 0 30px;
+    padding: 10px 30px;
     box-sizing: border-box;
     //div{
     //  width: 11%;
@@ -77,7 +89,6 @@ export default {
       animation-direction: normal;
       animation-fill-mode: forwards;
       animation-play-state: running;
-      
     }
 
     .item{

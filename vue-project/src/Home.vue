@@ -1,25 +1,25 @@
 <template>
   <div>
     <Navigation></Navigation>
-    <Content></Content>
-    <Bottom></Bottom>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Navigation from '@/components/Navigation';
-import Content from '@/components/Content';
-import Bottom from '@/components/Bottom';
 export default {
   name: "Home",
   components: {
-    Navigation,
-    Content,
-    Bottom
+    Navigation
+  },
+  data() {
+    return {
+
+    }
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 
 </style>

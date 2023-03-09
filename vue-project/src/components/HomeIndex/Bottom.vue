@@ -1,6 +1,6 @@
 <template>
   <div class="big-box">
-    <div class="bj">
+    <div class="bj" v-if="titleType == 1">
       <div class="title">VIGOO GAMES</div>
       <div class="small-title">Play online games on Vigoo</div>
       <div class="text">
@@ -19,12 +19,47 @@
       <div class="small-title">Contact Us</div>
       <div class="text">E-mail: vigoogame@gmail.com</div>
     </div>
+    <div class="bj" v-if="titleType == 2">
+      <div class="title">New Games</div>
+      <div class="small-title">What is New Games?</div>
+      <div class="text">
+        New Games contains the latest games recently launched by VIGOO, and collects the most popular new games. Different free new games are provided to players every day, and there are various game types, such as Gun Games, Shooting Games, Puzzle Games, Car Games, Action Games, Arcade Games, Girl Games, Kid Games, etc.
+      </div>
+    </div>
+    <div class="bj" v-if="titleType == 3">
+      <div class="title">Girls Games</div>
+      <div class="small-title">What is Girls Games?</div>
+      <div class="text">
+        Girls games refer to games that are specially created for the majority of girls and are in line with girls’ personalities, including dress-up games, make-up games, cooking games, training games, etc.
+      </div>
+      <div class="small-title">Role playing game</div>
+      <div class="text">
+        Role-play in the game, such as teachers, restaurant owners, chefs and other roles, complete different role tasks, and experience a diverse life!
+      </div>
+      <div class="small-title">Dress up game</div>
+      <div class="text">
+        The dress up game is divided into two series: costume and makeup. Dress up and clothing series games, you can choose clothes, bags, shoes and various accessories for the protagonist according to the game tasks and scenes. In the makeup series of games, you can choose various colors of eye shadow, lipstick, blush or nail polish for the protagonist to satisfy the girls' hearts.
+      </div>
+      <div class="small-title">Where are the most fun girls games?</div>
+      <div class="text">
+        We have collected the best free online cgirls games. These games include browser games for your computer and mobile devices, as well as apps for Android and iOS phones and tablets. These include new girl games such as Happy Crayons, Princess Nail Art, Puppy Blast, Mahjong Sweet Easter, Tiktok Princess, Fun Summer Holiday and other games.
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Bottom"
+  name: "Bottom",
+  props: ["titleType"],
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+    console.log(this.titleType);
+  }
 }
 </script>
 

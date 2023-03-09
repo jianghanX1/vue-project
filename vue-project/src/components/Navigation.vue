@@ -1,12 +1,12 @@
 <template>
     <div>
       <div class="bj">
-        <div class="title">ViGOO GAMES</div>
+        <div class="title" @click="vigooGamesClick">ViGOO GAMES</div>
         <div class="nav-list">
-          <div>New Games</div>
-          <div>Girl Games</div>
-          <div>MMORPG</div>
-          <div>Top Games</div>
+          <div @click="newGamesClick">New Games</div>
+          <div @click="girlGamesClick">Girl Games</div>
+          <div @click="mmorpgClick">MMORPG</div>
+          <div @click="topGames">Top Games</div>
           <div>New Games</div>
           <div>New Games</div>
           <div>New Games</div>
@@ -29,6 +29,33 @@ export default {
     return {
       searchInput: null
     }
+  },
+  methods: {
+    vigooGamesClick() {
+      this.$router.push({
+        path: '/'
+      })
+    },
+    newGamesClick() {
+      this.$router.push({
+        path: '/newGames'
+      })
+    },
+    girlGamesClick() {
+      this.$router.push({
+        path: '/girlGames'
+      })
+    },
+    mmorpgClick() {
+      this.$router.push({
+        path: '/mmorpg'
+      })
+    },
+    topGames() {
+      this.$router.push({
+        path: '/topGames'
+      })
+    },
   },
   created() {
     if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
@@ -63,6 +90,7 @@ export default {
       div{
         float: left;
         margin-left: 15px;
+        padding: 0 15px;
       }
       div:hover{
         background-color: rgba(0,0,0,.1);
