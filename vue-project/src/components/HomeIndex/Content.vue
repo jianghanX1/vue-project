@@ -61,18 +61,6 @@ export default {
     overflow: hidden;
     padding: 10px 30px;
     box-sizing: border-box;
-    //div{
-    //  width: 11%;
-    //  float: left;
-    //  padding: 10px;
-    //  box-sizing: border-box;
-    //  img{
-    //    width: 100%;
-    //    height: 100%;
-    //    border-radius: 20px;
-    //    border: 2px solid #fff;
-    //  }
-    //}
     @keyframes example {
       0%  {transform: scale(1);}
       35%  {transform: scale(1.2);}
