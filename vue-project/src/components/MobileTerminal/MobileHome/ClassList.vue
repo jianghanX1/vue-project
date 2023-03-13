@@ -1,7 +1,7 @@
 <template>
   <div class="class-box">
     <div class="class-list">
-      <div class="class-item" v-for="(item,index) in arr" :key="index"><img :src="img6" alt=""></div>
+      <div class="class-item" v-for="(item,index) in arr" :key="index" @click="detailsClick"><img :src="img6" alt=""></div>
     </div>
   </div>
 </template>
@@ -14,6 +14,13 @@ export default {
     return {
       img6,
       arr: [1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    }
+  },
+  methods: {
+    detailsClick() {
+      this.$router.push({
+        path: '/mobileDetails'
+      })
     }
   }
 }

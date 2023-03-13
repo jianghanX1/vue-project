@@ -3,7 +3,7 @@
     <div class="app-list" v-for="(item,index) in arr" :key="index">
       <div class="app-list-content">
         <div class="content-top">
-          <div class="item"><img :src="img6" alt=""></div>
+          <div class="item" @click="detailsClick"><img :src="img6" alt=""></div>
           <div class="item"><img :src="img7" alt=""></div>
           <div class="item"><img :src="img8" alt=""></div>
         </div>
@@ -44,6 +44,13 @@ export default {
       img7,
       img8,
       arr: [1,1,1]
+    }
+  },
+  methods: {
+    detailsClick() {
+      this.$router.push({
+        path: '/mobileDetails'
+      })
     }
   }
 }

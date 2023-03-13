@@ -1,6 +1,6 @@
 <template>
   <div class="top-box">
-    <div class="item"><img :src="img6" alt=""></div>
+    <div class="item" @click="detailsClick"><img :src="img6" alt=""></div>
     <div class="item"><img :src="img7" alt=""></div>
     <div class="item"><img :src="img8" alt=""></div>
     <div class="item"><img :src="img9" alt=""></div>
@@ -23,6 +23,13 @@ export default {
       img8,
       img9,
       img99,
+    }
+  },
+  methods: {
+    detailsClick() {
+      this.$router.push({
+        path: '/mobileDetails'
+      })
     }
   }
 }
