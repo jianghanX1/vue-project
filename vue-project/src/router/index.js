@@ -7,6 +7,7 @@ import GirlGames from '@/components/GirlGames/Index';
 import Mmorpg from '@/components/Mmorpg/Index';
 import TopGames from '@/components/TopGames/Index';
 import Details from '@/components/Details/Index'; // 详情页
+import MobileClassify from '@/components/MobileTerminal/MobileHome/MobileClassify/Index'
 
 Vue.use(Router)
 
@@ -43,6 +44,11 @@ export default new Router({
         name: 'Details',
         component: Details
       }]
+    },
+    {
+      path: '/mobileClassify',
+      name: 'MobileClassify',
+      component: MobileClassify
     }
   ]
 })

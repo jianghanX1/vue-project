@@ -57,14 +57,6 @@ export default {
       })
     },
   },
-  created() {
-    if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-      console.log(111)
-
-    } else {
-      console.log(2)
-    }
-  }
 }
 </script>
 
