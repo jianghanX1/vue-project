@@ -43,6 +43,11 @@ export default {
       console.log(2)
       this.screenType = 2
     }
+    this.$axios.get('/api/todos/1').then((res)=>{
+      console.log(res);
+    }).catch((err)=>{
+      console.log(err);
+    })
   }
 }
 </script>

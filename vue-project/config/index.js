@@ -10,7 +10,17 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {  // 以/api开头的请求
+        target: 'https://jsonplaceholder.typicode.com',  // 以/api开头的请求，全部代理到https://m.maoyan.com上
+        // ws: true,
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        },
+        secure: true,
+      },
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

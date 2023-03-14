@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
 import { Button, Select, Input } from 'element-ui'
 
+Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
 Vue.use(Button)

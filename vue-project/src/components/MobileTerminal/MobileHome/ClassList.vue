@@ -1,6 +1,6 @@
 <template>
-  <div class="class-box">
-    <div class="class-list">
+  <div class="class-box" :style="styleType ? {marginTop: 0} : null">
+    <div class="class-list" :style="styleType ? {padding: 0} : null">
       <div class="class-item" v-for="(item,index) in arr" :key="index" @click="detailsClick"><img :src="img6" alt=""></div>
     </div>
   </div>
@@ -10,6 +10,7 @@
 import img6 from '@/assets/06.webp'
 export default {
   name: "ClassList",
+  props: ["styleType"],
   data() {
     return {
       img6,
@@ -20,7 +21,7 @@ export default {
     detailsClick() {
       this.$router.push({
         path: '/mobileDetails'
-      })
+      },()=>{})
     }
   }
 }
